@@ -10,7 +10,8 @@ requirejs.config({
 
         //app
         {   name: 'app', location: 'js/app' , main: 'app'    },
-        {   name: 'workingWithObjects', location: 'js/app' , main: 'workingWithObjects'    }
+        {   name: 'workingWithObjects', location: 'js/app' , main: 'workingWithObjects'    },
+        {   name: 'arrayObject', location: 'js/app' , main: 'arrayObject'    }
     ]
 });
 

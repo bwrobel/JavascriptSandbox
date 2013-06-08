@@ -1,28 +1,31 @@
 define([],function(){
     var getMessage = function(){
-
-        var message = arguments[0];
-
-        if(typeof message != "object")
-        {
-            message = '%c' + message;
-            for(var i = 1 ; i < arguments.length ; i++)
-            {
-                message = message.replace('{' + (i-1) + '}', arguments[i]);
-            }
-        }
+        var message = '%c' + arguments[0];
+        Array.prototype.slice.call(arguments,1).forEach(function(literal,index){
+            message = message.replace('{' + index + '}', literal);
+        });
         return message;
     };
 
     return {
         info : function(){
-            console.info(getMessage.apply(this, arguments),'background: white; color: blue');
+            if(typeof arguments[0] == "object")
+                console.info(arguments[0]);
+            else
+                console.info(getMessage.apply(this, arguments),'background: white; color: blue;font-weight: bold');
         },
         warn : function(){
-            console.warn(getMessage.apply(this, arguments),'background: #222; color: orange');
+            if(typeof arguments[0] == "object")
+                console.warn(arguments[0]);
+            else
+                console.warn(getMessage.apply(this, arguments),'color: #FF6600;font-weight: bold');
         },
         error : function(){
-            console.error(getMessage.apply(this, arguments),'background: red; color: white');
+            if(typeof arguments[0] == "object")
+                console.error(arguments[0]);
+            else
+                console.error(getMessage.apply(this, arguments),'color: #FF0000;text-decoration:underline;font-weight: bold');
+
         }
     }
 })

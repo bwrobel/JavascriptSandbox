@@ -27,12 +27,17 @@ define(['jquery','logger'], function($,logger){
             myCar.model = "Mustang";
             myCar.year = 1996;
             myCar["color"] = "red";
-
+            Car.prototype.owner = 'Bartek';
             mySecondCar = new Car('Fiat','Seichento',2012,'Yellow');
+            myThirdCar = new Car('Mercedes','LX300',2010,'Black');
+
             logger.info(myCar);
             logger.info(showProps(myCar,'MyCar'));
 
             logger.info(mySecondCar);
+            logger.info(myThirdCar);
+            logger.info(myThirdCar.owner);
+            logger.info(mySecondCar.owner);
             logger.info(showProps(mySecondCar,'mySecondCar'));
 
 

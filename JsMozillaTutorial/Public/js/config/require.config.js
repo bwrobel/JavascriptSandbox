@@ -13,7 +13,8 @@ requirejs.config({
         {   name: 'app', location: 'js/app' , main: 'app'    },
         {   name: 'workingWithObjects', location: 'js/app' , main: 'workingWithObjects'    },
         {   name: 'arrayObject', location: 'js/app' , main: 'arrayObject'    },
-        {   name: 'inheritance', location: 'js/app' , main: 'inheritance'    }
+        {   name: 'inheritance', location: 'js/app' , main: 'inheritance'    },
+		{   name: 'consoleTools', location: 'js/app' , main: 'consoleTools'    }
     ]
 });
 

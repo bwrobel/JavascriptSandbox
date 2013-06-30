@@ -1,8 +1,11 @@
-define(['jquery','workingWithObjects','arrayObject','inheritance'],
-    function($,workingWithObjects,arrayObject,inheritance){
+define(['jquery','workingWithObjects','arrayObject','inheritance','consoleTools'],
+	
+    function($,workingWithObjects,arrayObject,inheritance,consoleTools){
     //workingWithObjects.execute();
     //arrayObject.spliceExample();
     //arrayObject.sliceExample();
-    inheritance.example();
+    //inheritance.example();
+	consoleTools.execute();
+	
 })
 

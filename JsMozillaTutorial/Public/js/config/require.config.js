@@ -14,7 +14,11 @@ requirejs.config({
         {   name: 'workingWithObjects', location: 'js/app' , main: 'workingWithObjects'    },
         {   name: 'arrayObject', location: 'js/app' , main: 'arrayObject'    },
         {   name: 'inheritance', location: 'js/app' , main: 'inheritance'    },
-		{   name: 'consoleTools', location: 'js/app' , main: 'consoleTools'    }
+		{   name: 'consoleTools', location: 'js/app' , main: 'consoleTools'    },
+
+        //api
+        {   name: 'geolocation', location: 'js/api' , main: 'w3cGeolocation'    }
+
     ]
 });
 
